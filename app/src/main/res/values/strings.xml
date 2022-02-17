@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tom And JerryShow</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="score">Score:</string>
+    <string name="saved_high_score_key">High Score</string>
+    <integer name="saved_high_score_default_key">0</integer>
+    <string name="mode_one">PLAY GAME</string>
+    <string name="mode_two">Mode Two</string>
+</resources>

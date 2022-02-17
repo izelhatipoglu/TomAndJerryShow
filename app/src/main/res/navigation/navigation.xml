@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.izelhatipoglu.tomandjerryshow.view.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_tomAndJerryGame"
+            app:destination="@id/tomAndJerryGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/tomAndJerryGame"
+        android:name="com.izelhatipoglu.tomandjerryshow.view.TomAndJerryGame"
+        android:label="fragment_tom_and_jerry_game"
+        tools:layout="@layout/fragment_tom_and_jerry_game" >
+        <action
+            android:id="@+id/action_tomAndJerryGame_to_animationFragment"
+            app:destination="@id/animationFragment" />
+        <action
+            android:id="@+id/action_tomAndJerryGame_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_tomAndJerryGame_to_victoryFragment"
+            app:destination="@id/victoryFragment" />
+        <action
+            android:id="@+id/action_tomAndJerryGame_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animationFragment"
+        android:name="com.izelhatipoglu.tomandjerryshow.view.AnimationFragment"
+        android:label="fragment_animation"
+        tools:layout="@layout/fragment_animation" >
+        <action
+            android:id="@+id/action_animationFragment_to_tomAndJerryGame"
+            app:destination="@id/tomAndJerryGame" />
+        <action
+            android:id="@+id/action_animationFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_animationFragment_to_victoryFragment"
+            app:destination="@id/victoryFragment" />
+        <action
+            android:id="@+id/action_animationFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.izelhatipoglu.tomandjerryshow.view.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="currentScor"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/victoryFragment"
+        android:name="com.izelhatipoglu.tomandjerryshow.view.VictoryFragment"
+        android:label="fragment_victory"
+        tools:layout="@layout/fragment_victory" >
+        <action
+            android:id="@+id/action_victoryFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+</navigation>
